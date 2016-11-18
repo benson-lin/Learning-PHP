@@ -12,8 +12,10 @@ laravel框架需要依赖composer
 
 接着在这个目录下新建文件composer.bat，写入
 
+```bat
 @ECHO OFF
 php "%~dp0composer.phar" %*
+```
 
 如果还没设置php环境变量的先设置。让控制台能够使用php命令
 
