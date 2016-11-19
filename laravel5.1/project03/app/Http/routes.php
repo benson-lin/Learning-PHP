@@ -25,3 +25,7 @@ Route::get('/testSelectOneColumn', 'EloquentController@selectOneColumn');
 Route::get('/testCount', 'EloquentController@count');
 Route::get('/testMax', 'EloquentController@max');
 Route::get('/testAvg', 'EloquentController@avg');
+Route::get('/testWhere', 'EloquentController@where');
+Route::get('/testOrderBy', 'EloquentController@orderBy');
+Route::get('/testGroupByHaving', 'EloquentController@groupByHaving');
+Route::get('/testJoin', 'EloquentController@join');

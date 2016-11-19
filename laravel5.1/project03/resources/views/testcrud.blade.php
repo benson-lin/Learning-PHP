@@ -10,41 +10,7 @@
             
             $(function(){
 
-                $("#testInsert").click(function(){
-
-                    $.ajax({
-                         url:'/testInsert',
-                         dataType:'json',
-                         success: function(data){
-                           $('#content').text(JSON.stringify(data));
-                                  
-                         }
-                    });
-                });
-
-              $("#testUpdate").click(function(){
-
-                    $.ajax({
-                         url:'/testUpdate',
-                         dataType:'json',
-                         success: function(data){
-                           $('#content').text(JSON.stringify(data));
-                                  
-                         }
-                    });
-                });
-
-              $("#testDelete").click(function(){
-
-                    $.ajax({
-                         url:'/testDelete',
-                         dataType:'json',
-                         success: function(data){
-                           $('#content').text(JSON.stringify(data));
-                                  
-                         }
-                    });
-                });
+               
                 $("#testSelectAll").click(function(){
 
                     $.ajax({
@@ -105,7 +71,7 @@
                     });
                 });
 
-                  $("#testAvg").click(function(){
+                $("#testAvg").click(function(){
 
                     $.ajax({
                          url:'/testAvg',
@@ -116,23 +82,117 @@
                          }
                     });
                 });
+                $("#testWhere").click(function(){
+
+                    $.ajax({
+                         url:'/testWhere',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+                $("#testOrderBy").click(function(){
+
+                    $.ajax({
+                         url:'/testOrderBy',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+
+                $("#testGroupByHaving").click(function(){
+
+                    $.ajax({
+                         url:'/testGroupByHaving',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+                $("#testJoin").click(function(){
+
+                    $.ajax({
+                         url:'/testJoin',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+
+
+
+
+
+
+                $("#testInsert").click(function(){
+
+                    $.ajax({
+                         url:'/testInsert',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+
+              $("#testUpdate").click(function(){
+
+                    $.ajax({
+                         url:'/testUpdate',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+
+              $("#testDelete").click(function(){
+
+                    $.ajax({
+                         url:'/testDelete',
+                         dataType:'json',
+                         success: function(data){
+                           $('#content').text(JSON.stringify(data));
+                                  
+                         }
+                    });
+                });
+
 
             });
+
+
+
+
+             
+
         </script>
 
 
     </head>
     <body>
 
-    <div class="btn-group">
-      <button type="button" class="btn btn-default" id="testInsert">testInsert</button>
-    </div>
-    <div class="btn-group">
-      <button type="button" class="btn btn-default" id="testUpdate">testUpdate</button>
+
+    <div class="btn-group"  >
+      <button type="button" class="btn btn-default" id="testSelectAll">testSelectAll</button>
     </div>
 
     <div class="btn-group">
-      <button type="button" class="btn btn-default" id="testDelete">testDelete</button>
+      <button type="button" class="btn btn-default" id="testSelectOne">testSelectOne</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" id="testSelectOneColumn">testSelectOneColumn</button>
     </div>
 
 
@@ -148,22 +208,37 @@
       <button type="button" class="btn btn-default" id="testAvg">testAvg</button>
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-body" id="content">
-      </div>
-    </div>
 
+
+    <br>
+    <div class="btn-group"  >
+      <button type="button" class="btn btn-default" id="testWhere">testWhere</button>
+    </div>
+    <div class="btn-group"  >
+      <button type="button" class="btn btn-default" id="testOrderBy">testOrderBy</button>
+    </div>
+    <div class="btn-group"  >
+      <button type="button" class="btn btn-default" id="testGroupByHaving">testGroupByHaving</button>
+    </div>
+    <div class="btn-group"  >
+      <button type="button" class="btn btn-default" id="testJoin">testJoin</button>
+    </div>
     <br>
 
 
-    <div class="btn-group"  >
-      <button type="button" class="btn btn-default" id="testSelectAll">testSelectAll</button>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" id="testInsert">testInsert</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default" id="testUpdate">testUpdate</button>
     </div>
 
     <div class="btn-group">
-      <button type="button" class="btn btn-default" id="testSelectOne">testSelectOne</button>
+      <button type="button" class="btn btn-default" id="testDelete">testDelete</button>
     </div>
-    <div class="btn-group">
-      <button type="button" class="btn btn-default" id="testSelectOneColumn">testSelectOneColumn</button>
+
+    <div class="panel panel-default">
+      <div class="panel-body" id="content">
+      </div>
     </div>
 </html>
