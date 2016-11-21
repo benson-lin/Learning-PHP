@@ -1,26 +1,26 @@
-# Eloquent 数据库操作
+# 数据库操作
 
-对应project03，测试Eloquent的CRUD
+对应project03，测试数据库的CRUD
 
 数据库和project02相比，主要是在users表中添加了数据用来测试join, 同时修改了原有的数据用来测试更多的语句。
 
 使用了如下语句
 
-![](img/2016-11-19-use-eloquent-02.png)
+![](img/2016-11-19-use-database-02.png)
 
-![](img/2016-11-19-use-eloquent-03.png)
+![](img/2016-11-19-use-database-03.png)
 
 UserSeeder文件也已经生成并配置完成放到在对应的目录下。
 
 users表构造如下：
 
-![](img/2016-11-19-use-eloquent-04.png)
+![](img/2016-11-19-use-database-04.png)
 
 我将数据库导出放到project03目录下，但是是测试之后的结果，不是原数据。文件名为`project03.sql`，只需在本地创建这个数据库并导入就可以了。同时使用了jq和bootstrap, 已放到了public目录下。使用`php artisan serve`启动,将数据库返回的信息展示在前端。
 
 结果如下图：
 
-![](img/2016-11-19-use-eloquent-01.png)
+![](img/2016-11-19-use-database-01.png)
 
 关键代码文件是下面几个,具体运行情况需要部署起来和数据库结合起来查看结构，可以自己构造数据，修改语句测试：
 

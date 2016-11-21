@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
@@ -18,7 +18,7 @@ class AdminController extends BaseController
     public function test()
     {
         // $name = $request->input('name');
-        echo "222";
+        echo "111";
         //
     }
 }

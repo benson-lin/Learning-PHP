@@ -44,7 +44,7 @@ Route::get('posts/{post}/comments/{comment}', function($postId,$commentId){
 Route::get('user/2/{name?}',function($name='bensonlin'){
 	return $name;
 });
-// 正则表达式限制where，不符合将跳转到404页面，可以将想要的404页面定义在/resources/views/errors/404.blade.php中
+// 正则表达式限制where，不符合将跳转到404页面，可以将自定义的404页面写在/resources/views/errors/404.blade.php中
 Route::get('user/3/{id}/{name}', function ($id, $name) {
     return $id.",".$name;
 })
@@ -53,18 +53,20 @@ Route::get('user/3/{id}/{name}', function ($id, $name) {
 // fail
 // prefix是URL前缀，namesapace是在App\Http\Controllers\下添加的文件夹
 // http://localhost:8000/admin/1/a
-Route::group(['namespace'=>'Admin', 'prefix'=>'admin'], function(){
-	Route::get('1/{adminId}', 'AdminController@test');
+Route::group(['prefix'=>'admin', 'namespace' => 'Admin'], function(){
+	
 	// App\Http\Controllers\Admin\AdminControlle
+	Route::get('/test', 'AdminController@test');
 
 });
+
+
 
 
 // 添加中间件, 这里是登录中间件
-//
-Route::group(['middleware'=>'auth', 'prefix'=>'admin'],function(){
+// Route::group(['middleware'=>'auth', 'prefix'=>'admin'],function(){
 
-	Route::get('/profile', function () {
-        // 使用 Auth 中间件
-    });
-});
+// 	Route::get('/profile', function () {
+//         // 使用 Auth 中间件
+//     });
+// });
