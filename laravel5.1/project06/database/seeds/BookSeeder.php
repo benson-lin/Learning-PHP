@@ -15,9 +15,9 @@ class BookSeeder extends Seeder
     public function run()
     {
     	// $this->getPhone();
-    	$this->getPhoneUser();
+    	// $this->getPhoneUser();
         // $this->getBorrowUser();
-        // $this->getBorrowBooks();
+        $this->getBorrowBooks();
         // $this->getBookCategories();
         // $this->getBorrowBooksThenWhere();
     }
@@ -42,6 +42,7 @@ class BookSeeder extends Seeder
     {
     	$books = User::find(1)->borrowBooks;
     	echo $books;
+    	var_dump($books);
     }
 
     // 一对多 belongsTo
